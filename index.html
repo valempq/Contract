@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-Host Employment Contract</title>
+    <style>
+        body {
+            background-color: #e8dfd1;
+            font-family: "Times New Roman", Times, serif;
+            color: #2b2b2b;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .contract-container {
+            background-color: #fcf9f2;
+            border: 3px solid #3c2f2f;
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .contract-header {
+            text-align: center;
+            border-bottom: 2px double #3c2f2f;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .contract-header h2 {
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0;
+            color: #2b2b2b;
+        }
+
+        .contract-header p {
+            font-style: italic;
+            font-size: 0.95em;
+            margin: 5px 0 0 0;
+            color: #555;
+        }
+
+        .contract-body {
+            font-size: 1.05em;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .contract-body p {
+            margin-bottom: 16px;
+        }
+
+        .signatures-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            border-top: 1px solid #c8b99f;
+            padding-top: 25px;
+            gap: 20px;
+        }
+
+        .signature-block {
+            width: 48%;
+        }
+
+        .signature-block label {
+            display: block;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+            color: #3c2f2f;
+        }
+
+        .pre-signed {
+            font-family: "Brush Script MT", "Snell Roundhand", cursive, serif;
+            font-size: 1.8em;
+            color: #1a2536;
+            border-bottom: 1px solid #3c2f2f;
+            padding-bottom: 5px;
+            height: 45px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 1em;
+            border: 1px solid #8c7b65;
+            background: #fff;
+            box-sizing: border-box;
+        }
+
+        .canvas-container {
+            position: relative;
+            border: 1px dashed #8c7b65;
+            background: #fff;
+            height: 90px;
+            margin-top: 5px;
+            cursor: crosshair;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+
+        .canvas-clear {
+            font-size: 0.75em;
+            background: none;
+            border: none;
+            color: #775533;
+            cursor: pointer;
+            padding: 0;
+            margin-top: 2px;
+            text-decoration: underline;
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            background-color: #3c2f2f;
+            color: #fcf9f2;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            font-family: "Times New Roman", Times, serif;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #5c4747;
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            color: #2e5c31;
+            font-weight: bold;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        @media(max-width: 600px) {
+            .signatures-section {
+                flex-direction: column;
+            }
+            .signature-block {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .contract-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="contract-container">
+    <div class="contract-header">
+        <h2>Exclusive Talent &amp; Co-Host Agreement</h2>
+        <p>Standard Broadcast Services Contract</p>
+    </div>
+
+    <div class="contract-body">
+        <p><strong>1. TERM:</strong> This Agreement is entered into by and between the Production Entity (Employer) and <strong>Braun</strong> (Contractor / Co-Host). The term of this contract shall be exactly <strong>1 (one) year</strong> beginning upon full execution.</p>
+        
+        <p><strong>2. POSITION &amp; DUTIES:</strong> The Contractor shall provide professional services as primary <strong>Co-Host</strong>, participating in scheduled weekly broadcast recordings, promotional spots, and network media engagements as directed.</p>
+        
+        <p><strong>3. COMPENSATION:</strong> In consideration for services rendered, the Employer agrees to disburse a monthly base compensation of <strong>$20,000 (Twenty Thousand US Dollars)</strong>, payable on the final business day of each active calendar month.</p>
+        
+        <p><strong>4. CONFIDENTIALITY:</strong> The Co-Host agrees to strictly safeguard all unreleased show materials, proprietary formats, and production schedules against unauthorized disclosure.</p>
+    </div>
+
+    <div class="signatures-section">
+        <!-- Employer / Pre-signed by Braun -->
+        <div class="signature-block">
+            <label>EMPLOYER / REPRESENTATIVE:</label>
+            <div class="pre-signed">Braun</div>
+            <small style="color: #666; font-size: 0.8em;">Authorized Signature (Braun)</small>
+        </div>
+
+        <!-- Co-Host / User Signature Area -->
+        <div class="signature-block">
+            <div class="input-group">
+                <label for="cohostName">CO-HOST NAME:</label>
+                <input type="text" id="cohostName" placeholder="Type your character / reader name">
+            </div>
+            
+            <label>DIGITAL SIGNATURE:</label>
+            <div class="canvas-container">
+                <canvas id="sigCanvas"></canvas>
+            </div>
+            <button type="button" class="canvas-clear" id="clearBtn">Clear Signature</button>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button type="button" class="btn" id="signBtn">Sign &amp; Execute Contract</button>
+        <div class="success-message" id="successMsg">✓ Contract successfully executed and signed!</div>
+    </div>
+</div>
+
+<script>
+    const canvas = document.getElementById('sigCanvas');
+    const ctx = canvas.getContext('2d');
+    let isDrawing = false;
+
+    // Resize canvas coordinate space to match display size
+    function resizeCanvas() {
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Mouse events
+    canvas.addEventListener('mousedown', (e) => {
+        isDrawing = true;
+        ctx.beginPath();
+        ctx.moveTo(e.offsetX, e.offsetY);
+    });
+    canvas.addEventListener('mousemove', (e) => {
+        if (!isDrawing) return;
+        ctx.lineTo(e.offsetX, e.offsetY);
+        ctx.strokeStyle = '#1a2536';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+    });
+    window.addEventListener('mouseup', () => isDrawing = false);
+
+    // Touch events for mobile/tablets
+    canvas.addEventListener('touchstart', (e) => {
+        isDrawing = true;
+        const rect = canvas.getBoundingClientRect();
+        const touch = e.touches[0];
+        ctx.beginPath();
+        ctx.moveTo(touch.clientX - rect.left, touch.clientY - rect.top);
+        e.preventDefault();
+    });
+    canvas.addEventListener('touchmove', (e) => {
+        if (!isDrawing) return;
+        const rect = canvas.getBoundingClientRect();
+        const touch = e.touches[0];
+        ctx.lineTo(touch.clientX - rect.left, touch.clientY - rect.top);
+        ctx.strokeStyle = '#1a2536';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        e.preventDefault();
+    });
+    window.addEventListener('touchend', () => isDrawing = false);
+
+    // Clear button
+    document.getElementById('clearBtn').addEventListener('click', () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    });
+
+    // Sign button action
+    document.getElementById('signBtn').addEventListener('click', () => {
+        const nameInput = document.getElementById('cohostName').value.trim();
+        if (!nameInput) {
+            alert('Please type your name before signing.');
+            return;
+        }
+        
+        // Lock inputs
+        document.getElementById('cohostName').setAttribute('readonly', true);
+        canvas.style.pointerEvents = 'none';
+        document.getElementById('signBtn').style.display = 'none';
+        document.getElementById('clearBtn').style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+    });
+</script>
+
+</body>
+</html>
